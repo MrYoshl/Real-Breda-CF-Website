@@ -1,18 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Real Breda CF - Players</title>
 
+  <!-- Favicon links -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph / social sharing preview -->
+  <meta property="og:title" content="Real Breda CF" />
+  <meta property="og:description" content="Explore the official Real Breda CF squad, stats, and club history." />
+  <meta property="og:image" content="https://mrYoshl.github.io/Real-Breda-CF-Website/favicons/social-preview.png" />
+  <meta property="og:url" content="https://mryoshl.github.io/Real-Breda-CF-Website/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Styles (unchanged) -->
+  <style>
+    /* Your existing CSS here */
+  </style>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Breda CF - Players</title>
+
   <!-- Favicon -->
-  <link rel="icon" href="/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="main/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="main/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="main/favicons/apple-touch-icon.png" sizes="180x180">
 
   <!-- Web App Manifest -->
-  <link rel="manifest" href="/favicons/site.webmanifest">
+  <link rel="manifest" href="main/favicons/site.webmanifest">
 
-  <!-- Your existing styles -->
   <style>
-    /* ... your CSS styles ... */
+    body {
+      margin: 0;
+      font-family: "Roboto Slab", serif;
+      background-color: #C4B67D;
+      color: white;
+    }
+
+    header {
+      background-color: black;
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 1rem;
+    }
+
+    .title {
+      font-family: "Sahitya", serif;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #f0d674;
+    }
+
+    .content {
+      padding: 2rem;
+    }
+
+    .section-wrapper {
+      position: relative;
+      margin-bottom: 2rem;
+      height: 100px;
+    }
+
+    .section-title {
+      position: relative;
+      font-size: 36px;
+      font-family: "Times Sans Serif", serif;
+      padding-left: 1rem;
+      z-index: 1;
+      display: inline-block;
+      top: 25px;
+    }
+
+    .player-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .player-image {
+      width: 100%;
+      max-width: 400px;
+      height: -50px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.0);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .logo img {
+        height: 40px;
+      }
+
+      .player-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .triangle-bg {
+        display: none;
+      }
+    }
   </style>
 </head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="250px-Logo_NAC_Breda.svg.png" alt="NAC Breda Logo" />
+      <div class="title">Real Breda CF</div>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Lineup</a>
+      <a href="#">Players</a>
+      <a href="#">History</a>
+      <a href="#">Results</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="section-wrapper">
+      <div class="triangle-bg"></div>
+      <h2 class="section-title">Goalkeepers</h2>
+    </div>
+
+    <div class="player-section">
+      <img src="e15e5d63-5ab8-40db-86d8-8eb4f3544c6f.png" alt="Goalkeeper Image" class="player-image" />
+    </div>
+  </div>
+
+</body>
+</html>
