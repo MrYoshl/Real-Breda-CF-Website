@@ -1,180 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Real Breda CF - Players</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Breda CF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sahitya:wght@700&family=Roboto+Slab:wght@400&family=Times+New+Roman&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #C4B67D;
+            font-family: 'Roboto Slab', serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+            height: 80px;
+            z-index: 10; /* Keep header above background image */
+        }
+        header img {
+            width: 45px;
+            height: 50px;
+        }
+        .team-title {
+            font-family: 'Sahitya', serif;
+            font-weight: 700;
+            font-size: 31px;
+            color: white;
+            position: absolute;
+            left: 120px;
+            top: 29px;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            font-family: 'Roboto Slab', serif;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #C4B67D;
+        }
+        /* NEW container for main content with background image */
+        .main-content-wrapper {
+            position: relative;
+            padding: 20px;
+            z-index: 1;
+        }
+        .main-content-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 50px; /* Push down a bit below header */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;  /* Adjust size as needed */
+            height: 600px; /* Adjust size as needed */
+            background-image: url('57bb613f-093a-4ca4-a43e-b993846c7b2f.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 1;  /* Subtle visibility */
+            pointer-events: none; /* So clicks pass through */
+            z-index: 0;
+        }
 
-  <!-- Favicon links -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <!-- Open Graph / social sharing preview -->
-  <meta property="og:title" content="Real Breda CF" />
-  <meta property="og:description" content="Explore the official Real Breda CF squad, stats, and club history." />
-  <meta property="og:image" content="https://mrYoshl.github.io/Real-Breda-CF-Website/favicons/social-preview.png" />
-  <meta property="og:url" content="https://mryoshl.github.io/Real-Breda-CF-Website/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Styles (unchanged) -->
-  <style>
-    /* Your existing CSS here */
-  </style>
-
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Real Breda CF - Players</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="main/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="main/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="apple-touch-icon" href="main/favicons/apple-touch-icon.png" sizes="180x180">
-
-  <!-- Web App Manifest -->
-  <link rel="manifest" href="main/favicons/site.webmanifest">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Roboto Slab", serif;
-      background-color: #C4B67D;
-      color: white;
-    }
-
-    header {
-      background-color: black;
-      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 50px;
-      margin-right: 1rem;
-    }
-
-    .title {
-      font-family: "Sahitya", serif;
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #f0d674;
-    }
-
-    .content {
-      padding: 2rem;
-    }
-
-    .section-wrapper {
-      position: relative;
-      margin-bottom: 2rem;
-      height: 100px;
-    }
-
-    .section-title {
-      position: relative;
-      font-size: 36px;
-      font-family: "Times Sans Serif", serif;
-      padding-left: 1rem;
-      z-index: 1;
-      display: inline-block;
-      top: 25px;
-    }
-
-    .player-section {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .player-image {
-      width: 100%;
-      max-width: 400px;
-      height: -50px;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.0);
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: center;
-      }
-
-      .section-title {
-        font-size: 28px;
-      }
-
-      .logo img {
-        height: 40px;
-      }
-
-      .player-section {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .triangle-bg {
-        display: none;
-      }
-    }
-  </style>
+        .section-title {
+            font-family: 'Times New Roman', serif;
+            font-size: 24px;
+            background-color: rgb(69, 69, 69);
+            color: white;
+            padding: 6px 12px;
+            text-align: left;
+            margin: 20px 0 10px 0;
+            width: fit-content;
+            border-radius: 4px;
+            position: relative;
+            z-index: 2; /* Above background */
+        }
+        .player-section {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+            gap: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        .player {
+            width: 300px; /* Keep your images at 300x500 */
+            height: 500px;
+            background-color: transparent; /* placeholders transparent */
+            border: 0px solid black;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            overflow: hidden;
+            position: relative;
+        }
+        .player img {
+            width: 300px;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+        .player:hover {
+            transform: scale(1.05);
+            z-index: 3; /* Hovered player above background */
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="250px-Logo_NAC_Breda.svg.png" alt="NAC Breda Logo" />
-      <div class="title">Real Breda CF</div>
-    </div>
+<header>
+    <img src="250px-Logo_NAC_Breda.svg.png" alt="Real Breda CF Badge" />
+    <h1 class="team-title">Real Breda CF</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Lineup</a>
-      <a href="#">Players</a>
-      <a href="#">History</a>
-      <a href="#">Results</a>
+        <a href="#home">Home</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#players">Players</a>
+        <a href="#history">History</a>
+        <a href="#results">Results</a>
     </nav>
-  </header>
+</header>
 
-  <div class="content">
-    <div class="section-wrapper">
-      <div class="triangle-bg"></div>
-      <h2 class="section-title">Goalkeepers</h2>
-    </div>
+<div class="main-content-wrapper">
 
-    <div class="player-section">
-      <img src="e15e5d63-5ab8-40db-86d8-8eb4f3544c6f.png" alt="Goalkeeper Image" class="player-image" />
-    </div>
-  </div>
+    <main>
+        <h2 class="section-title">Goalkeepers</h2>
+        <div class="player">
+            <img src="HNOU0643.PNG" alt="Goalkeeper" width="300" height="500" />
+        </div>
+
+        <h2 class="section-title">Defenders</h2>
+        <div class="player-section">
+            <div class="player"><img src="defender-placeholder1.jpg" alt="Defender 1" /></div>
+            <div class="player"><img src="defender-placeholder2.jpg" alt="Defender 2" /></div>
+            <div class="player"><img src="defender-placeholder3.jpg" alt="Defender 3" /></div>
+            <div class="player"><img src="defender-placeholder4.jpg" alt="Defender 4" /></div>
+        </div>
+
+        <h2 class="section-title">Midfielders</h2>
+        <div class="player-section">
+            <div class="player"><img src="e15e5d63-5ab8-40db-86d8-8eb4f3544c6f.png" alt="Midfielder 1" /></div>
+            <div class="player"><img src="XPTD7478.PNG" alt="Midfielder 2" /></div>
+            <div class="player"><img src="midfielder-placeholder3.jpg" alt="Midfielder 3" /></div>
+            <div class="player"><img src="midfielder-placeholder4.jpg" alt="Midfielder 4" /></div>
+            <div class="player"><img src="midfielder-placeholder5.jpg" alt="Midfielder 5" /></div>
+        </div>
+
+        <h2 class="section-title">Attackers</h2>
+        <div class="player-section">
+            <div class="player"><img src="attacker-placeholder1.jpg" alt="Attacker 1" /></div>
+            <div class="player"><img src="attacker-placeholder2.jpg" alt="Attacker 2" /></div>
+        </div>
+    </main>
+
+</div>
+
+<footer>
+    <p>This website is not affiliated with or endorsed by NAC Breda. All trademarks, logos, and brand names are the property of their respective owners.
+        The NAC Breda logo is used for informational and non-commercial purposes only and remains the intellectual property of NAC Breda.
+        This usage is subject to change upon request from NAC Breda Football Group.</p>
+</footer>
 
 </body>
 </html>
