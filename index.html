@@ -3,25 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Real Breda CF - Players</title>
-  <meta name="description" content="Welcome to the offical website for the FC 25 Pro Clubs team Real Breda based on the real life club Nac Breda!" />
-<meta name="keywords" content="Real Breda CF, EA FC 25, Pro Clubs, football, soccer, lineup, players, history, results" />
-<meta name="author" content="Real Breda CF" />
-<meta property="og:title" content="Real Breda CF" />
-<meta property="og:description" content="Welcome to the offical website for the FC 25 Pro Clubs team Real Breda based on the real life club Nac Breda!" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://realbreda.xyz" />
-<meta property="og:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Real Breda CF" />
-<meta name="twitter:description" content="Official website for the EA FC 25 Pro Clubs team Real Breda CF. Check lineup, players, history, and results." />
-<meta name="twitter:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
+  <title>Real Breda CF - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: #000; /* Footer and header remain black */
+      background-color: #000;
       color: #fff;
     }
 
@@ -42,6 +30,26 @@
       margin-top: 10px;
     }
 
+.player-image {
+  display: block;
+  margin: 0 auto 10px auto; /* center horizontally by default */
+  width: 90%;               
+  border-radius: 8px;
+  position: relative;
+  left: -40px;              
+}
+
+    .player-name {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;          /* same size as other text */
+  color: #ccc;             /* same subtle color */
+  font-weight: 600;        /* slightly bold for emphasis */
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.5px;   /* slight letter spacing for neatness */
+  text-transform: capitalize; /* optional: capitalizes first letter */
+}
+
     nav a {
       color: white;
       margin: 0 15px;
@@ -49,69 +57,61 @@
       font-size: 1em;
     }
 
-    .main-content {
-      background-color: #9e8f5f; /* Darker gold */
-      padding-bottom: 40px;
+    .hero {
+      background-color: #9e8f5f;
+      color: #111;
+      padding: 60px 20px;
+      text-align: center;
     }
 
-    .section-title {
-      padding: 25px 10px 10px;
+    .hero h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .content-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .content-section h3 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.8em;
-      text-align: center;
-      border-bottom: 2px solid #222;
-      letter-spacing: 1px;
-      color: #111;
+      margin-bottom: 20px;
     }
 
-    .scroll-section {
+    .content-blocks {
       display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      padding: 20px;
+      flex-wrap: wrap;
       gap: 20px;
+      justify-content: center;
     }
 
-    .scroll-section::-webkit-scrollbar {
-      display: none;
-    }
-
-    .scroll-section {
-      scrollbar-width: none;
-    }
-
-    .player-card {
-      flex: 0 0 auto;
-      scroll-snap-align: start;
+    .block {
       background-color: #1c1c1c;
-      border-radius: 12px;
-      width: 180px;
-      text-align: center;
-      padding: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-      transition: transform 0.2s ease-in-out;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
-    .player-card:hover {
-      transform: scale(1.05);
+    .block h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4em;
+      margin-bottom: 10px;
     }
 
-    .player-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      pointer-events: none;
-      user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    .player-card .name {
-      margin-top: 10px;
-      font-weight: bold;
-      font-size: 1em;
-      color: #f0f0f0;
+    .block p {
+      font-size: 0.95em;
+      color: #ccc;
     }
 
     footer {
@@ -122,146 +122,55 @@
       color: #aaa;
     }
 
-    /* === MOBILE AND TABLET SUPPORT === */
     @media (max-width: 768px) {
-      header div[style*="flex-wrap: wrap"] {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      header img {
-        height: 50px;
-      }
-
-      nav {
-        margin-top: 5px;
-      }
-
-      nav a {
-        margin: 0 10px;
-        font-size: 0.9em;
-        white-space: nowrap;
-      }
-
-      .scroll-section {
-        padding: 10px;
-        gap: 15px;
-      }
-
-      .player-card {
-        width: 140px;
-        padding: 10px;
-      }
-
-      .section-title {
-        font-size: 1.5em;
-        padding: 15px 10px 8px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5em;
-      }
-
-      nav a {
-        margin: 0 8px;
-        font-size: 0.85em;
-      }
-
-      .player-card {
-        width: 120px;
-        padding: 8px;
-      }
-
-      .section-title {
-        font-size: 1.3em;
-        padding: 12px 8px 6px;
+      .block {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
- <header>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <img src="250px-Logo_NAC_Breda.svg.png" alt="NAC Breda Logo" style="height: 60px; width: auto;">
-    <div>
-      <h1>Real Breda CF</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Players</a>
-        <a href="#">Stats</a>
-        <a href="#">Trophies</a>
-      </nav>
-    </div>
-  </div>
-</header>
-
-
-  <div class="main-content">
-
-    <div class="section-title">Goalkeepers</div>
-    <div class="scroll-section">
-      <div class="player-card">
-        <img src="Goalkeeper.PNG" alt="GK1">
-        <div class="name">GK</div>
-      </div>
-      <div class="player-card">
-        <img src="https://via.placeholder.com/180x250?text=GK2" alt="GK2">
-        <div class="name">GK2</div>
+  <header>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <img src="250px-Logo_NAC_Breda.svg.png" alt="NAC Breda Logo" style="height: 60px; width: auto;">
+      <div>
+        <h1>Real Breda CF</h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="players.html">Players</a>
+          <a href="#">Stats</a>
+          <a href="#">Trophies</a>
+        </nav>
       </div>
     </div>
+  </header>
 
-    <div class="section-title">Defenders</div>
-    <div class="scroll-section">
-      <div class="player-card">
-        <img src="https://via.placeholder.com/180x250?text=DEF1" alt="DEF1">
-        <div class="name">DEF1</div>
+  <section class="hero">
+    <h2>Welcome to Real Breda CF</h2>
+    <p>Your go-to hub for squad updates, stats, trophies and the rich legacy of our Pro Clubs journey. </p>
+  </section>
+
+  <section class="content-section">
+    <h3>Latest Updates</h3>
+    <div class="content-blocks">
+      <div class="block">
+        <h4>Match Recap</h4>
+        <p></p>
       </div>
-      <div class="player-card">
-        <img src="https://via.placeholder.com/180x250?text=DEF2" alt="DEF2">
-        <div class="name">DEF2</div>
-      </div>
-      <div class="player-card">
-        <img src="https://via.placeholder.com/180x250?text=DEF3" alt="DEF3">
-        <div class="name">DEF3</div>
+    
+ <div class="block">
+  <h4>Top Scorer</h4>
+  <img src="Striker.PNG" alt="Frank Ocean" class="player-image">
+  <p class="player-name">10 GOALS</p>
+</div>
+
+      <div class="block">
+        <h4>Next Fixture</h4>
+        <p></p>
       </div>
     </div>
-
-    <div class="section-title">Midfielders</div>
-    <div class="scroll-section">
-      <div class="player-card">
-        <img src="LAM.PNG" alt="LAM">
-        <div class="name">LAM</div>
-      </div>
-      <div class="player-card">
-        <img src="https://via.placeholder.com/180x250?text=CM2" alt="CM2">
-        <div class="name">CM2</div>
-      </div>
-      <div class="player-card">
-        <img src="https://via.placeholder.com/180x250?text=CAM" alt="CAM">
-        <div class="name">CAM</div>
-      </div>
-    </div>
-
-    <div class="section-title">Forwards</div>
-    <div class="scroll-section">
-      <div class="player-card">
-        <img src="https://via.placeholder.com/180x250?text=LW" alt="LW">
-        <div class="name">LW</div>
-      </div>
-      <div class="player-card">
-        <img src="Striker.PNG" alt="ST">
-        <div class="name">ST</div>
-      </div>
-      <div class="player-card">
-        <img src="https://via.placeholder.com/180x250?text=RW" alt="RW">
-        <div class="name">RW</div>
-      </div>
-    </div>
-
-  </div>
+  </section>
 
   <footer>
     This website is not affiliated with NAC Breda. All logos and names are property of their respective owners.
