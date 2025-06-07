@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Real Breda CF</title>
-<meta name="description" content="Welcome to the offical website for the FC 25 Pro Clubs team Real Breda based on the real life club Nac Breda!" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real Breda CF - Players</title>
+  <meta name="description" content="Welcome to the offical website for the FC 25 Pro Clubs team Real Breda based on the real life club Nac Breda!" />
 <meta name="keywords" content="Real Breda CF, EA FC 25, Pro Clubs, football, soccer, lineup, players, history, results" />
 <meta name="author" content="Real Breda CF" />
 <meta property="og:title" content="Real Breda CF" />
@@ -16,181 +16,256 @@
 <meta name="twitter:title" content="Real Breda CF" />
 <meta name="twitter:description" content="Official website for the EA FC 25 Pro Clubs team Real Breda CF. Check lineup, players, history, and results." />
 <meta name="twitter:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
-<link href="https://fonts.googleapis.com/css2?family=Sahitya:wght@700&family=Roboto+Slab:wght@400&family=Times+New+Roman&display=swap" rel="stylesheet" />
-<style>
-        body {
-            background-color: #C4B67D;
-            font-family: 'Roboto Slab', serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: black;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            position: relative;
-            height: 80px;
-            z-index: 10; /* Keep header above background image */
-        }
-        header img {
-            width: 45px;
-            height: 50px;
-        }
-        .team-title {
-            font-family: 'Sahitya', serif;
-            font-weight: 700;
-            font-size: 31px;
-            color: white;
-            position: absolute;
-            left: 120px;
-            top: 29px;
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            font-family: 'Roboto Slab', serif;
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #C4B67D;
-        }
-        /* NEW container for main content with background image */
-        .main-content-wrapper {
-            position: relative;
-            padding: 20px;
-            z-index: 1;
-        }
-        .main-content-wrapper::before {
-            content: "";
-            position: absolute;
-            top: 50px; /* Push down a bit below header */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 800px;  /* Adjust size as needed */
-            height: 600px; /* Adjust size as needed */
-            background-image: url('57bb613f-093a-4ca4-a43e-b993846c7b2f.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            opacity: 1;  /* Subtle visibility */
-            pointer-events: none; /* So clicks pass through */
-            z-index: 0;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000; /* Footer and header remain black */
+      color: #fff;
+    }
 
-        .section-title {
-            font-family: 'Times New Roman', serif;
-            font-size: 24px;
-            background-color: rgb(69, 69, 69);
-            color: white;
-            padding: 6px 12px;
-            text-align: left;
-            margin: 20px 0 10px 0;
-            width: fit-content;
-            border-radius: 4px;
-            position: relative;
-            z-index: 2; /* Above background */
-        }
-        .player-section {
-            display: flex;
-            overflow-x: auto;
-            padding: 20px 0;
-            gap: 10px;
-            position: relative;
-            z-index: 2;
-        }
-        .player {
-            width: 300px; /* Keep your images at 300x500 */
-            height: 500px;
-            background-color: transparent; /* placeholders transparent */
-            border: 0px solid black;
-            border-radius: 5px;
-            transition: transform 0.3s;
-            overflow: hidden;
-            position: relative;
-        }
-        .player img {
-            width: 300px;
-            height: 500px;
-            object-fit: cover;
-            display: block;
-        }
-        .player:hover {
-            transform: scale(1.05);
-            z-index: 3; /* Hovered player above background */
-        }
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            position: relative;
-            z-index: 2;
-        }
-    </style>
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .main-content {
+      background-color: #9e8f5f; /* Darker gold */
+      padding-bottom: 40px;
+    }
+
+    .section-title {
+      padding: 25px 10px 10px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8em;
+      text-align: center;
+      border-bottom: 2px solid #222;
+      letter-spacing: 1px;
+      color: #111;
+    }
+
+    .scroll-section {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .scroll-section::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scroll-section {
+      scrollbar-width: none;
+    }
+
+    .player-card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      width: 180px;
+      text-align: center;
+      padding: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .player-card:hover {
+      transform: scale(1.05);
+    }
+
+    .player-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .player-card .name {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1em;
+      color: #f0f0f0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #000;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    /* === MOBILE AND TABLET SUPPORT === */
+    @media (max-width: 768px) {
+      header div[style*="flex-wrap: wrap"] {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header img {
+        height: 50px;
+      }
+
+      nav {
+        margin-top: 5px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+        white-space: nowrap;
+      }
+
+      .scroll-section {
+        padding: 10px;
+        gap: 15px;
+      }
+
+      .player-card {
+        width: 140px;
+        padding: 10px;
+      }
+
+      .section-title {
+        font-size: 1.5em;
+        padding: 15px 10px 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 0.85em;
+      }
+
+      .player-card {
+        width: 120px;
+        padding: 8px;
+      }
+
+      .section-title {
+        font-size: 1.3em;
+        padding: 12px 8px 6px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="250px-Logo_NAC_Breda.svg.png" alt="Real Breda CF Badge" />
-    <h1 class="team-title">Real Breda CF</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#lineup">Lineup</a>
-        <a href="#players">Players</a>
-        <a href="#history">History</a>
-        <a href="#results">Results</a>
-    </nav>
+ <header>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <img src="250px-Logo_NAC_Breda.svg.png" alt="NAC Breda Logo" style="height: 60px; width: auto;">
+    <div>
+      <h1>Real Breda CF</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Players</a>
+        <a href="#">Stats</a>
+        <a href="#">Trophies</a>
+      </nav>
+    </div>
+  </div>
 </header>
 
-<div class="main-content-wrapper">
 
-    <main>
-        <h2 class="section-title">Goalkeepers</h2>
-        <div class="player">
-            <img src="HNOU0643.PNG" alt="Goalkeeper" width="300" height="500" />
-        </div>
+  <div class="main-content">
 
-        <h2 class="section-title">Defenders</h2>
-        <div class="player-section">
-            <div class="player"><img src="defender-placeholder1.jpg" alt="Defender 1" /></div>
-            <div class="player"><img src="defender-placeholder2.jpg" alt="Defender 2" /></div>
-            <div class="player"><img src="defender-placeholder3.jpg" alt="Defender 3" /></div>
-            <div class="player"><img src="defender-placeholder4.jpg" alt="Defender 4" /></div>
-        </div>
+    <div class="section-title">Goalkeepers</div>
+    <div class="scroll-section">
+      <div class="player-card">
+        <img src="Goalkeeper.PNG" alt="GK1">
+        <div class="name">GK</div>
+      </div>
+      <div class="player-card">
+        <img src="https://via.placeholder.com/180x250?text=GK2" alt="GK2">
+        <div class="name">GK2</div>
+      </div>
+    </div>
 
-        <h2 class="section-title">Midfielders</h2>
-        <div class="player-section">
-            <div class="player"><img src="e15e5d63-5ab8-40db-86d8-8eb4f3544c6f.png" alt="Midfielder 1" /></div>
-            <div class="player"><img src="XPTD7478.PNG" alt="Midfielder 2" /></div>
-            <div class="player"><img src="midfielder-placeholder3.jpg" alt="Midfielder 3" /></div>
-            <div class="player"><img src="midfielder-placeholder4.jpg" alt="Midfielder 4" /></div>
-            <div class="player"><img src="midfielder-placeholder5.jpg" alt="Midfielder 5" /></div>
-        </div>
+    <div class="section-title">Defenders</div>
+    <div class="scroll-section">
+      <div class="player-card">
+        <img src="https://via.placeholder.com/180x250?text=DEF1" alt="DEF1">
+        <div class="name">DEF1</div>
+      </div>
+      <div class="player-card">
+        <img src="https://via.placeholder.com/180x250?text=DEF2" alt="DEF2">
+        <div class="name">DEF2</div>
+      </div>
+      <div class="player-card">
+        <img src="https://via.placeholder.com/180x250?text=DEF3" alt="DEF3">
+        <div class="name">DEF3</div>
+      </div>
+    </div>
 
-        <h2 class="section-title">Attackers</h2>
-        <div class="player-section">
-            <div class="player"><img src="attacker-placeholder1.jpg" alt="Attacker 1" /></div>
-            <div class="player"><img src="attacker-placeholder2.jpg" alt="Attacker 2" /></div>
-        </div>
-    </main>
+    <div class="section-title">Midfielders</div>
+    <div class="scroll-section">
+      <div class="player-card">
+        <img src="LAM.PNG" alt="LAM">
+        <div class="name">LAM</div>
+      </div>
+      <div class="player-card">
+        <img src="https://via.placeholder.com/180x250?text=CM2" alt="CM2">
+        <div class="name">CM2</div>
+      </div>
+      <div class="player-card">
+        <img src="https://via.placeholder.com/180x250?text=CAM" alt="CAM">
+        <div class="name">CAM</div>
+      </div>
+    </div>
 
-</div>
+    <div class="section-title">Forwards</div>
+    <div class="scroll-section">
+      <div class="player-card">
+        <img src="https://via.placeholder.com/180x250?text=LW" alt="LW">
+        <div class="name">LW</div>
+      </div>
+      <div class="player-card">
+        <img src="Striker.PNG" alt="ST">
+        <div class="name">ST</div>
+      </div>
+      <div class="player-card">
+        <img src="https://via.placeholder.com/180x250?text=RW" alt="RW">
+        <div class="name">RW</div>
+      </div>
+    </div>
 
-<footer>
-    <p>This website is not affiliated with or endorsed by NAC Breda. All trademarks, logos, and brand names are the property of their respective owners.
-        The NAC Breda logo is used for informational and non-commercial purposes only and remains the intellectual property of NAC Breda.
-        This usage is subject to change upon request from NAC Breda Football Group.</p>
-</footer>
+  </div>
+
+  <footer>
+    This website is not affiliated with NAC Breda. All logos and names are property of their respective owners.
+  </footer>
 
 </body>
 </html>
