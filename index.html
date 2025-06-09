@@ -4,19 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Real Breda CF - Home</title>
-   <meta name="description" content="Welcome to the offical website for the FC 25 Pro Clubs team Real Breda based on the real life club Nac Breda!" />
-<meta name="keywords" content="Real Breda CF, EA FC 25, Pro Clubs, football, soccer, lineup, players, history, results" />
-<meta name="author" content="Real Breda CF" />
-<meta property="og:title" content="Real Breda CF" />
-<meta property="og:description" content="Welcome to the offical website for the FC 25 Pro Clubs team Real Breda based on the real life club Nac Breda!" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://realbreda.xyz" />
-<meta property="og:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Real Breda CF" />
-<meta name="twitter:description" content="Official website for the EA FC 25 Pro Clubs team Real Breda CF. Check lineup, players, history, and results." />
-<meta name="twitter:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
+  <meta name="description" content="Welcome to the official website for the FC 25 Pro Clubs team Real Breda based on the real life club NAC Breda!" />
+  <meta name="keywords" content="Real Breda CF, EA FC 25, Pro Clubs, football, soccer, lineup, players, history, results" />
+  <meta name="author" content="Real Breda CF" />
+  <meta property="og:title" content="Real Breda CF" />
+  <meta property="og:description" content="Welcome to the official website for the FC 25 Pro Clubs team Real Breda based on the real life club NAC Breda!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://realbreda.xyz" />
+  <meta property="og:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Real Breda CF" />
+  <meta name="twitter:description" content="Official website for the EA FC 25 Pro Clubs team Real Breda CF. Check lineup, players, history, and results." />
+  <meta name="twitter:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -42,69 +43,57 @@
       margin-top: 10px;
     }
 
-.player-image {
-  display: block;
-  margin: 0 auto 10px auto; /* center horizontally by default */
-  width: 90%;               
-  border-radius: 8px;
-  position: relative;
-  left: -40px;              
-}
-
-    .player-name {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;          /* same size as other text */
-  color: #ccc;             /* same subtle color */
-  font-weight: 600;        /* slightly bold for emphasis */
-  margin: 0;
-  text-align: center;
-  letter-spacing: 0.5px;   /* slight letter spacing for neatness */
-  text-transform: capitalize; /* optional: capitalizes first letter */
-}
-
-/* Already present - just extending the styles */
-.news-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 0 10px;
-}
-
-@media (max-width: 768px) {
-  .news-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .block {
-    width: 100% !important;
-    max-width: 400px; /* Prevents being too wide on larger phones */
-  }
-
-  .player-image {
-    width: 100% !important;
-    height: auto;
-    left: 0 !important;
-    margin: 0 auto 10px auto;
-  }
-
-  .block h4,
-  .block p {
-    text-align: center;
-  }
-
-  .block a {
-    display: inline-block;
-    margin-top: 10px;
-    text-align: center;
-  }
-}
-
-
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-size: 1em;
+    }
+
+    .player-image {
+      display: block;
+      margin: 0 auto 10px auto;
+      width: 90%;
+      max-width: 280px;
+      border-radius: 8px;
+      position: static;
+    }
+
+    .player-name {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1em;
+      color: #ccc;
+      font-weight: 600;
+      margin: 0;
+      text-align: center;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+    }
+
+    .news-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 0 10px;
+    }
+
+    .block {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .block h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+
+    .block p {
+      font-size: 0.95em;
+      color: #ccc;
     }
 
     .hero {
@@ -145,25 +134,6 @@
       justify-content: center;
     }
 
-    .block {
-      background-color: #1c1c1c;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    .block h4 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.4em;
-      margin-bottom: 10px;
-    }
-
-    .block p {
-      font-size: 0.95em;
-      color: #ccc;
-    }
-
     footer {
       text-align: center;
       padding: 15px;
@@ -173,8 +143,31 @@
     }
 
     @media (max-width: 768px) {
+      .news-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .block {
         width: 100%;
+        max-width: 400px;
+      }
+
+      .player-image {
+        width: 100% !important;
+        height: auto;
+        margin: 0 auto 10px auto;
+      }
+
+      .block h4,
+      .block p {
+        text-align: center;
+      }
+
+      .block a {
+        display: inline-block;
+        margin-top: 10px;
+        text-align: center;
       }
     }
   </style>
@@ -187,51 +180,47 @@
       <div>
         <h1>Real Breda CF</h1>
         <nav>
-         <nav>
-  <a href="index.html">Home</a>
-  <a href="players.html">Players</a>
-  <a href="stats.html">Stats</a>
-  <a href="#">Trophies</a>
-</nav>
+          <a href="index.html">Home</a>
+          <a href="players.html">Players</a>
+          <a href="stats.html">Stats</a>
+          <a href="#">Trophies</a>
+        </nav>
       </div>
     </div>
   </header>
 
   <section class="hero">
     <h2>Welcome to Real Breda CF</h2>
-    <p>Your go-to hub for squad updates, stats, trophies and the rich legacy of our Pro Clubs journey. </p>
+    <p>Your go-to hub for squad updates, stats, trophies and the rich legacy of our Pro Clubs journey.</p>
   </section>
 
-   <section class="content-section">
-  <h3>Latest News</h3>
-  <div class="news-wrapper">
-    <div class="block">
-      <h4>Pre-Season Cup Begins Tomorrow!</h4>
-      <img src="Preseasoncupfixtures.png" alt="Pre-Season Cup" class="player-image" style="left: 0; width: 100%; margin-bottom: 10px;">
-      <p>Real Breda CF confirm their participation in the Competitive Esports League Pre Season Cup.</p>
-      <a href="PRESEASONCUPNEWS.html" style="color: #f0c75e; text-decoration: underline;">Read More</a>
+  <section class="content-section">
+    <h3>Latest News</h3>
+    <div class="news-wrapper">
+      <div class="block">
+        <h4>Pre-Season Cup Begins Tomorrow!</h4>
+        <img src="Preseasoncupfixtures.png" alt="Pre-Season Cup" class="player-image">
+        <p>Real Breda CF confirm their participation in the Competitive Esports League Pre Season Cup.</p>
+        <a href="PRESEASONCUPNEWS.html" style="color: #f0c75e; text-decoration: underline;">Read More</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="content-blocks">
+    <div class="block">
+      <h4>Match Recap</h4>
+      <p></p>
+    </div>
 
-    <div class="content-blocks">
-      <div class="block">
-        <h4>Match Recap</h4>
-        <p></p>
-      </div>
-    
-<div class="block">
-  <h4>Top Scorer</h4>
-  <img src="Striker.PNG" alt="Frank Ocean" class="player-image">
-  <p class="player-name">10 GOALS</p>
-</div>
+    <div class="block">
+      <h4>Top Scorer</h4>
+      <img src="Striker.PNG" alt="Frank Ocean" class="player-image">
+      <p class="player-name">10 GOALS</p>
+    </div>
 
-
-      <div class="block">
-        <h4>Next Fixture</h4>
-        <p></p>
-      </div>
+    <div class="block">
+      <h4>Next Fixture</h4>
+      <img src="ColossalTeam.PNG" alt="Next Fixture" class="player-image">
     </div>
   </section>
 
