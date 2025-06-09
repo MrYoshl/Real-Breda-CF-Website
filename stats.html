@@ -270,45 +270,54 @@ function filterStats(type) {
             assists: 0,
             cleanSheets: 0,
             ratingSum: 0,
-            appearances: 0
+            ratingCount: 0
           };
         }
+
         mergedStats[key].games += entry.games;
         mergedStats[key].goals += entry.goals;
         mergedStats[key].assists += entry.assists;
-        mergedStats[key].cleanSheets += entry.cleanSheets === '-' ? 0 : entry.cleanSheets;
-        mergedStats[key].ratingSum += entry.rating;
-        mergedStats[key].appearances += 1;
+        if (entry.cleanSheets !== '-') {
+          mergedStats[key].cleanSheets += entry.cleanSheets;
+        }
+
+        // Only count rating if player has actually played
+        if (entry.games > 0) {
+          mergedStats[key].ratingSum += entry.rating;
+          mergedStats[key].ratingCount += 1;
+        }
       });
     });
 
     for (const player in mergedStats) {
       const p = mergedStats[player];
-      const avgRating = (p.ratingSum / p.appearances).toFixed(1);
+      const avgRating = p.ratingCount > 0 ? (p.ratingSum / p.ratingCount).toFixed(1) : "-";
+      const cleanSheetsDisplay = p.cleanSheets === 0 ? "-" : p.cleanSheets;
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td data-label="Player">${player}</td>
-        <td data-label="Position">${p.position}</td>
-        <td data-label="Games">${p.games}</td>
-        <td data-label="Goals">${p.goals}</td>
-        <td data-label="Assists">${p.assists}</td>
-        <td data-label="Clean Sheets">${p.cleanSheets === 0 ? "-" : p.cleanSheets}</td>
-        <td data-label="Rating">${avgRating}</td>
+        <td>${player}</td>
+        <td>${p.position}</td>
+        <td>${p.games}</td>
+        <td>${p.goals}</td>
+        <td>${p.assists}</td>
+        <td>${cleanSheetsDisplay}</td>
+        <td>${avgRating}</td>
       `;
       tbody.appendChild(row);
     }
 
   } else {
     allStats[type].forEach(entry => {
+      const avgRating = entry.games > 0 ? entry.rating.toFixed(1) : "-";
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td data-label="Player">${entry.player}</td>
-        <td data-label="Position">${entry.position}</td>
-        <td data-label="Games">${entry.games}</td>
-        <td data-label="Goals">${entry.goals}</td>
-        <td data-label="Assists">${entry.assists}</td>
-        <td data-label="Clean Sheets">${entry.cleanSheets}</td>
-        <td data-label="Rating">${entry.rating.toFixed(1)}</td>
+        <td>${entry.player}</td>
+        <td>${entry.position}</td>
+        <td>${entry.games}</td>
+        <td>${entry.goals}</td>
+        <td>${entry.assists}</td>
+        <td>${entry.cleanSheets}</td>
+        <td>${avgRating}</td>
       `;
       tbody.appendChild(row);
     });
