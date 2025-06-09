@@ -7,7 +7,8 @@
     { "player": "Pimladen", "position": "CAM", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
     { "player": "Frank Ocean", "position": "LAM", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
     { "player": "Luis Diaz", "position": "RAM", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
-    { "player": "Debrickshaw Ferguson", "position": "ST", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 }
+    { "player": "Debrickshaw Ferguson", "position": "ST", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "SUBMISSIVE KUHN", "position": "Bench", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 }
   ],
   "normal": [
     { "player": "ftbltrent", "position": "GK", "games": 12, "goals": 0, "assists": 0, "cleanSheets": "0", "rating": 7.5 },
@@ -19,5 +20,16 @@
     { "player": "Luis Diaz", "position": "RAM", "games": 3, "goals": 6, "assists": 3, "cleanSheets": "-", "rating": 7.5 },
     { "player": "Debrickshaw Ferguson", "position": "ST", "games": 19, "goals": 32, "assists": 3, "cleanSheets": "-", "rating": 7.8 },
     { "player": "SUBMISSIVE KUHN", "position": "Bench", "games": 10, "goals": 3, "assists": 8, "cleanSheets": "-", "rating": 7.7 }
+  ],
+  "preseason": [
+    { "player": "ftbltrent", "position": "GK", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "Y4HY4", "position": "RB", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "SHAY SOBASED", "position": "CDM", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "Patrick Goat", "position": "CDM", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "Pimladen", "position": "CAM", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "Frank Ocean", "position": "LAM", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "Luis Diaz", "position": "RAM", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "Debrickshaw Ferguson", "position": "ST", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 },
+    { "player": "SUBMISSIVE KUHN", "position": "Bench", "games": 0, "goals": 0, "assists": 0, "cleanSheets": "-", "rating": 6 }
   ]
 }

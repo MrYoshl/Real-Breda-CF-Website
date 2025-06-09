@@ -214,9 +214,10 @@
   <h2>Team Stats</h2>
 
   <div class="filter-buttons">
-    <button class="active" onclick="filterStats('all')">All Matches</button>
-    <button onclick="filterStats('comp')">Competitive League</button>
-    <button onclick="filterStats('normal')">EA FC League</button>
+    <button data-type="all" class="active">All Matches</button>
+    <button data-type="comp">Competitive League</button>
+    <button data-type="normal">EA FC League</button>
+    <button data-type="preseason">Preseason Cup S1</button>
   </div>
 
   <table>
@@ -240,20 +241,28 @@
 </footer>
 
 <script>
-let allStats = { comp: [], normal: [] };
+let allStats = {};
 
 async function loadStats() {
   const response = await fetch('stats.json');
   allStats = await response.json();
+
   filterStats('all');
+
+  const buttons = document.querySelectorAll('.filter-buttons button');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const type = button.getAttribute('data-type');
+      filterStats(type);
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
 }
 
 function filterStats(type) {
   const tbody = document.getElementById("stats-body");
-  const buttons = document.querySelectorAll('.filter-buttons button');
-  buttons.forEach(btn => btn.classList.remove('active'));
-  document.querySelector(`.filter-buttons button[onclick="filterStats('${type}')"]`).classList.add('active');
-
   tbody.innerHTML = "";
 
   let mergedStats = {};
@@ -281,7 +290,6 @@ function filterStats(type) {
           mergedStats[key].cleanSheets += entry.cleanSheets;
         }
 
-        // Only count rating if player has actually played
         if (entry.games > 0) {
           mergedStats[key].ratingSum += entry.rating;
           mergedStats[key].ratingCount += 1;
@@ -295,13 +303,13 @@ function filterStats(type) {
       const cleanSheetsDisplay = p.cleanSheets === 0 ? "-" : p.cleanSheets;
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${player}</td>
-        <td>${p.position}</td>
-        <td>${p.games}</td>
-        <td>${p.goals}</td>
-        <td>${p.assists}</td>
-        <td>${cleanSheetsDisplay}</td>
-        <td>${avgRating}</td>
+        <td data-label="Player">${player}</td>
+        <td data-label="Position">${p.position}</td>
+        <td data-label="Games">${p.games}</td>
+        <td data-label="Goals">${p.goals}</td>
+        <td data-label="Assists">${p.assists}</td>
+        <td data-label="Clean Sheets">${cleanSheetsDisplay}</td>
+        <td data-label="Rating">${avgRating}</td>
       `;
       tbody.appendChild(row);
     }
@@ -311,13 +319,13 @@ function filterStats(type) {
       const avgRating = entry.games > 0 ? entry.rating.toFixed(1) : "-";
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${entry.player}</td>
-        <td>${entry.position}</td>
-        <td>${entry.games}</td>
-        <td>${entry.goals}</td>
-        <td>${entry.assists}</td>
-        <td>${entry.cleanSheets}</td>
-        <td>${avgRating}</td>
+        <td data-label="Player">${entry.player}</td>
+        <td data-label="Position">${entry.position}</td>
+        <td data-label="Games">${entry.games}</td>
+        <td data-label="Goals">${entry.goals}</td>
+        <td data-label="Assists">${entry.assists}</td>
+        <td data-label="Clean Sheets">${entry.cleanSheets}</td>
+        <td data-label="Rating">${avgRating}</td>
       `;
       tbody.appendChild(row);
     });
