@@ -4,136 +4,194 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Real Breda CF - Stats</title>
+  <meta name="description" content="Welcome to the official website for the FC 25 Pro Clubs team Real Breda based on the real life club NAC Breda!" />
+  <meta name="keywords" content="Real Breda CF, EA FC 25, Pro Clubs, football, soccer, lineup, players, history, results" />
+  <meta name="author" content="Real Breda CF" />
+  <meta property="og:title" content="Real Breda CF" />
+  <meta property="og:description" content="Welcome to the official website for the FC 25 Pro Clubs team Real Breda based on the real life club NAC Breda!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://realbreda.xyz" />
+  <meta property="og:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Real Breda CF" />
+  <meta name="twitter:description" content="Official website for the EA FC 25 Pro Clubs team Real Breda CF. Check lineup, players, history, and results." />
+  <meta name="twitter:image" content="https://realbreda.xyz/250px-Logo_NAC_Breda.svg.png" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
- <style>
-  body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #000;
-    color: #fff;
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
 
-  header, footer {
-    background-color: #000;
-    text-align: center;
-    padding: 20px;
-  }
+    header, footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+    }
 
-  header h1 {
-    margin: 0;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-  }
+    header h1 {
+      margin: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
 
-  nav {
-    margin-top: 5px;
-  }
+    nav {
+      margin-top: 5px;
+    }
 
-  nav a {
-    margin: 0 12px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-  }
+    nav a {
+      margin: 0 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
 
-  nav a:hover {
-    color: #9e8f5f;
-  }
+    nav a:hover {
+      color: #9e8f5f;
+    }
 
-  .stats-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-    background-color: #111;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  }
+    .stats-section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
 
-  .stats-section h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #e0e0e0;
-  }
+    .stats-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #e0e0e0;
+    }
 
-  .filter-buttons {
-    margin-bottom: 20px;
-  }
+    .filter-buttons {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-  .filter-buttons button {
-    background-color: #1c1c1c;
-    color: #fff;
-    border: 1px solid #444;
-    padding: 10px 18px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-
-  .filter-buttons button:hover {
-    background-color: #333;
-  }
-
-  .filter-buttons button.active {
-    background-color: #9e8f5f;
-    color: #000;
-    border-color: #9e8f5f;
-  }
-
-  table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    background-color: #111;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  th, td {
-    padding: 14px;
-    border-bottom: 1px solid #333;
-    text-align: center;
-  }
-
-  th {
-    background-color: #222;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
-    color: #fff;
-    letter-spacing: 1px;
-  }
-
-  td {
-    font-size: 0.95rem;
-    color: #ddd;
-  }
-
-  tr:nth-child(even) {
-    background-color: #1a1a1a;
-  }
-
-  footer {
-    margin-top: 60px;
-    font-size: 0.85rem;
-    color: #aaa;
-  }
-
-  @media (max-width: 768px) {
     .filter-buttons button {
+      background-color: #1c1c1c;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 10px 18px;
+      cursor: pointer;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #333;
+    }
+
+    .filter-buttons button.active {
+      background-color: #9e8f5f;
+      color: #000;
+      border-color: #9e8f5f;
+    }
+
+    table {
       width: 100%;
-      margin: 8px 0;
+      margin-top: 20px;
+      border-collapse: collapse;
+      background-color: #111;
+      border-radius: 8px;
+      overflow: hidden;
     }
 
     th, td {
-      padding: 10px 8px;
+      padding: 14px;
+      border-bottom: 1px solid #333;
+      text-align: center;
     }
-  }
-</style>
+
+    th {
+      background-color: #222;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    td {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #1a1a1a;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      header div {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .filter-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .filter-buttons button {
+        width: 100%;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #1a1a1a;
+      }
+
+      td {
+        text-align: left;
+        padding: 8px 10px;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        color: #999;
+        margin-bottom: 4px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -146,7 +204,7 @@
         <a href="index.html">Home</a>
         <a href="players.html">Players</a>
         <a href="stats.html">Stats</a>
-        <a href="">Trophies</a>
+        <a href="#">Trophies</a>
       </nav>
     </div>
   </div>
@@ -173,20 +231,7 @@
         <th>Rating</th>
       </tr>
     </thead>
-    <tbody id="stats-body">
-      <tr data-player="JohnDoe" data-type="comp">
-        <td>JohnDoe</td><td>ST</td><td>20</td><td>15</td><td>6</td><td>-</td><td>7.9</td>
-      </tr>
-      <tr data-player="JohnDoe" data-type="normal">
-        <td>JohnDoe</td><td>ST</td><td>25</td><td>13</td><td>4</td><td>-</td><td>7.3</td>
-      </tr>
-      <tr data-player="DefBoss" data-type="comp">
-        <td>DefBoss</td><td>CB</td><td>18</td><td>1</td><td>0</td><td>10</td><td>8.1</td>
-      </tr>
-      <tr data-player="DefBoss" data-type="normal">
-        <td>DefBoss</td><td>CB</td><td>20</td><td>1</td><td>1</td><td>5</td><td>7.5</td>
-      </tr>
-    </tbody>
+    <tbody id="stats-body"></tbody>
   </table>
 </section>
 
@@ -242,13 +287,13 @@ function filterStats(type) {
       const avgRating = (p.ratingSum / p.appearances).toFixed(1);
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${player}</td>
-        <td>${p.position}</td>
-        <td>${p.games}</td>
-        <td>${p.goals}</td>
-        <td>${p.assists}</td>
-        <td>${p.cleanSheets === 0 ? "-" : p.cleanSheets}</td>
-        <td>${avgRating}</td>
+        <td data-label="Player">${player}</td>
+        <td data-label="Position">${p.position}</td>
+        <td data-label="Games">${p.games}</td>
+        <td data-label="Goals">${p.goals}</td>
+        <td data-label="Assists">${p.assists}</td>
+        <td data-label="Clean Sheets">${p.cleanSheets === 0 ? "-" : p.cleanSheets}</td>
+        <td data-label="Rating">${avgRating}</td>
       `;
       tbody.appendChild(row);
     }
@@ -257,13 +302,13 @@ function filterStats(type) {
     allStats[type].forEach(entry => {
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${entry.player}</td>
-        <td>${entry.position}</td>
-        <td>${entry.games}</td>
-        <td>${entry.goals}</td>
-        <td>${entry.assists}</td>
-        <td>${entry.cleanSheets}</td>
-        <td>${entry.rating.toFixed(1)}</td>
+        <td data-label="Player">${entry.player}</td>
+        <td data-label="Position">${entry.position}</td>
+        <td data-label="Games">${entry.games}</td>
+        <td data-label="Goals">${entry.goals}</td>
+        <td data-label="Assists">${entry.assists}</td>
+        <td data-label="Clean Sheets">${entry.cleanSheets}</td>
+        <td data-label="Rating">${entry.rating.toFixed(1)}</td>
       `;
       tbody.appendChild(row);
     });
@@ -272,11 +317,6 @@ function filterStats(type) {
 
 window.addEventListener('DOMContentLoaded', loadStats);
 </script>
-
-
-
-
-
 
 </body>
 </html>
